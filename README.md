@@ -21,15 +21,6 @@ with wa.run():
     wa.wait(1)
 ```
 
-## Features
-
-- Simple window creation with colors
-- Smooth animations with 24+ easing functions
-- Images, GIFs, and video playback
-- Text rendering
-- Grid layouts
-- Live coding friendly
-
 ## Examples
 
 ```python
@@ -53,7 +44,3 @@ with wa.run():
 
     wa.wait(3)
 ```
-
-## License
-
-MIT
