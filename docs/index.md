@@ -49,4 +49,4 @@ pip install window-art
 
 ## License
 
-MIT License - see [LICENSE](https://github.com/window-art/window-art/blob/main/LICENSE) for details.
+MIT License - see [LICENSE](https://github.com/willmeyers/window-art/blob/main/LICENSE) for details.

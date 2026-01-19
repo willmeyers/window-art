@@ -14,7 +14,7 @@ pip install window-art
 ## Install from Source
 
 ```bash
-git clone https://github.com/window-art/window-art.git
+git clone https://github.com/willmeyers/window-art.git
 cd window-art
 pip install -e .
 ```

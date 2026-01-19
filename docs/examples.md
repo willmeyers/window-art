@@ -357,16 +357,10 @@ with wa.run():
 
 The `examples/` directory in the repository contains additional examples:
 
-- `sphere.py` - 3D sphere illusion with multiple windows
-- `text_demo.py` - Text rendering and styling
-- `rotating_planet.py` - Solar system animation
-- `grid_swap.py` - Windows swapping positions in a grid
-
 Clone the repository to run these examples:
 
 ```bash
-git clone https://github.com/window-art/window-art.git
+git clone https://github.com/willmeyers/window-art.git
 cd window-art
 pip install -e .
-python examples/dvd_bounce.py
 ```
