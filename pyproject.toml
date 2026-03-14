@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "window-art"
-version = "0.1.0"
+version = "0.1.1"
 description = "A minimal Python library for live coding visual scenes using desktop windows"
 readme = "README.md"
 license = "MIT"
