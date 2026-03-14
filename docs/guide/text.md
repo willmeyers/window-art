@@ -292,3 +292,10 @@ The text renderer tries to find fonts in this order:
    - Windows: `C:\Windows\Fonts\`
    - Linux: `/usr/share/fonts/`, `~/.fonts/`
 4. Pillow's default font as fallback
+
+!!! warning
+    If no matching font is found, the renderer falls back to Pillow's built-in default font. This default font may not support scaling, meaning `font_size` will have no effect. To ensure font styling works reliably, pass a direct path to a `.ttf` or `.otf` file:
+
+    ```python
+    win.font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    ```

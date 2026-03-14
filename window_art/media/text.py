@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import ctypes
+import warnings
 from typing import Any, Union
 
 _HAS_PIL = False
@@ -123,6 +124,9 @@ def _load_font(font: str, font_size: int) -> Any:
     else:
         font_paths = [
             f"/usr/share/fonts/truetype/{font.lower()}/{font}.ttf",
+            f"/usr/share/fonts/truetype/{font}.ttf",
+            f"/usr/share/fonts/{font}.ttf",
+            f"/usr/local/share/fonts/{font}.ttf",
             f"/usr/share/fonts/TTF/{font}.ttf",
             f"~/.fonts/{font}.ttf",
         ]
@@ -137,10 +141,13 @@ def _load_font(font: str, font_size: int) -> Any:
             except OSError:
                 continue
 
-    try:
-        return _ImageFont.load_default()
-    except Exception:
-        return _ImageFont.load_default(size=font_size)
+    warnings.warn(
+        f"Could not find font '{font}'. Falling back to Pillow's default font. "
+        f"For reliable font styling, provide a path to a .ttf or .otf file.",
+        UserWarning,
+        stacklevel=3,
+    )
+    return _ImageFont.load_default(size=font_size)
 
 
 class TextRenderer:
